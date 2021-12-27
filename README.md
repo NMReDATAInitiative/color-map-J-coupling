@@ -72,7 +72,7 @@ It has chosen order to provide a large color contrast for values that are partic
 		</tr>
 	</table>
 
-Convert J value in (R, G, B) values (0 - 1).
+Convert J value into (R, G, B) values (0 - 1).
 
 ```cpp
 double colormapWhiteBackground[] = {0, 1, 1, 0, 1, 0, 0.8, 0.8, 0, 0.9, 0.4, 0, 1, 0, 0, 1, 0, 0.5, 1, 0, 1, 0.5, 0, 1, 0, 0, 1, 0, 0, 0.5, 0, 0, 0,}; // for white background
@@ -86,6 +86,7 @@ float adjust = (JcouplingAbs - 2 * baseColorInt) / 2.0; // normalized diff (0-1)
 if (adjust > 1.0) adjust = 1.0; // adjust 0 - 1.0
 const int baseColorIndex =  3 * baseColorInt; // 3 because RGB
 // the loop is language dependent, lets drop it...
+double colormap[] = {0, 0, 0};
 curColor[0] = colormap[baseColorIndex + 0] + adjust * (colormap[baseColorIndex + 3 + 0] - colormap[baseColorIndex + 0]);
 curColor[1] = colormap[baseColorIndex + 1] + adjust * (colormap[baseColorIndex + 3 + 1] - colormap[baseColorIndex + 1]);
 curColor[2] = colormap[baseColorIndex + 2] + adjust * (colormap[baseColorIndex + 3 + 2] - colormap[baseColorIndex + 2]);
