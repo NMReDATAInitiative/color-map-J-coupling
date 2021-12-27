@@ -1,107 +1,77 @@
-# color-map-J-coupling
-Color map for J coupling (for J-graph and other color-coded representation of NMR H-H scalar coupling constants
+# Color map for J coupling 
 
-It has been carefully thought through in order to provide a large color contrast for values that are particularily significant.
+This color map was designed for for J-graph and other color-coded representation of NMR J(H,H) ranging from 0 to 20 Hz.
 
-First line: 0 Hz
-Second line: 2 Hz
-Last (line 11): 20 Hz
-## Black background
-```
-double colormapBlackBackground[] = {
-0, 1, 1, 
-0, 1, 0, 
-1, 1, 0, 
-1, 0.5, 0, 
-1, 0, 0, 
-1, 0, 0.5, 1, 
-0, 1, 0.5, 
-0, 0.9, 0.2, 
-0.2, 1, 0.4, 
-0.4, 0.5, 
-1, 1, 1,
-};
-```  
-## White background
-```
-double colormapWhiteBackground[] = {
-0, 1, 1, 
-0, 1, 0, 
-0.8, 0.8, 0, 
-0.9, 0.4, 0, 
-1, 0, 0, 
-1, 0, 0.5, 
-1, 0, 1, 
-0.5, 0, 1, 
-0, 0, 1, 
-0, 0, 0.5, 
-0, 0, 0,
-};
-```
+It has chosen order to provide a large color contrast for values that are particularily significant (small, about 7.0 and about 12 Hz).
 
 <table>
 		<tr>
 			<th>J </th>
-			<th>(R G B) </th>
-			<th>(R G B) </th>
+			<th>Black background</th>
+			<th>White background</th>
 		</tr>
 		<tr>
-			<td> 0 Hz</td>
+			<td>Hz</td>
+			<td>RGB (0-1)</td>
+			<td>RGB (0-1)</td>
+		</tr>
+		<tr>
+			<td> 0</td>
 			<td> <span style="color:#00FFFF;background:black;">(0 1 1)</span> </td>
 			<td> <span style="color:#00FFFF;background:white;">(0 1 1)</span> </td>
 		</tr>
 		<tr>
-			<td> 2 Hz</td>
+			<td> 2</td>
 			<td> <span style="color:#00FF00;background:black;">(0 1 0)</span> </td>
 			<td> <span style="color:#00FF00;background:white;">(0 1 0)</span> </td>
 		</tr>
 		<tr>
-			<td> 4 Hz</td>
+			<td> 4</td>
 			<td> <span style="color:#FFFF00;background:black;">(1 1 0)</span> </td>
 			<td> <span style="color:#CCCC00;background:white;">(0.8 0.8 0)</span> </td>
 		</tr>
 		<tr>
-			<td> 6 Hz</td>
+			<td> 6</td>
 			<td> <span style="color:#FF7F00;background:black;">(1 0.5 0)</span> </td>
 			<td> <span style="color:#D26600;background:white;">(0.9 0.4 0)</span> </td>
 		</tr>
 		<tr>
-			<td> 8 Hz</td>
+			<td> 8</td>
 			<td> <span style="color:#FF0000;background:black;">(1 0 0)</span> </td>
 			<td> <span style="color:#FF0000;background:white;">(1 0 0)</span> </td>
 		</tr>
 		<tr>
-			<td> 10 Hz</td>
+			<td> 10</td>
 			<td> <span style="color:#FF007F;background:black;">(1 0 0.5)</span> </td>
 			<td> <span style="color:#FF007F;background:white;">(1 0 0.5)</span> </td>
 		</tr>
 		<tr>
-			<td> 12 Hz</td>
+			<td> 12</td>
 			<td> <span style="color:#FF00FF;background:black;">(1 0 1)</span> </td>
 			<td> <span style="color:#FF00FF;background:white;">(1 0 1)</span> </td>
 		</tr>
 		<tr>
-			<td> 14 Hz</td>
+			<td> 14</td>
 			<td> <span style="color:#7F00E6;background:black;">(0.5 0 0.9)</span> </td>
 			<td> <span style="color:#7F00FF;background:white;">(0.5 0 1)</span> </td>
 		</tr>
 		<tr>
-			<td> 16 Hz</td>
+			<td> 16</td>
 			<td> <span style="color:#3333FF;background:black;">(0.2 0.2 1)</span> </td>
 			<td> <span style="color:#0000FF;background:white;">(0 0 1)</span> </td>
 		</tr>
 		<tr>
-			<td> 18 Hz</td>
+			<td> 18</td>
 			<td> <span style="color:#66667F;background:black;">(0.4 0.4 0.5)</span> </td>
 			<td> <span style="color:#00007F;background:white;">(0 0 0.5)</span> </td>
 		</tr>
 		<tr>
-			<td> 20 Hz</td>
+			<td> 20</td>
 			<td> <span style="color:#FFFFFF;background:black;">(1 1 1)</span> </td>
 			<td> <span style="color:#000000;background:white;">(0 0 0)</span> </td>
 		</tr>
 	</table></div>
-    </div>
+</div>
  
 Decoding code
 
