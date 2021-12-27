@@ -1,6 +1,6 @@
 # Color map for J coupling 
 
-This color map was designed for [J-graph](https://nmredatainitiative.github.io/J-graph/) and other color-coded representation of NMR J(H,H) ranging from 0 to 20 Hz.
+This color map was designed for [J-graphs](https://nmredatainitiative.github.io/J-graph/) and other color-coded representation of NMR J(H,H) ranging from 0 to 20 Hz.
 
 It was chosen order to provide a large color contrast for values that are particularily significant (small, about 7.0 and about 12 Hz).
 
