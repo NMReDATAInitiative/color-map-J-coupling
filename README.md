@@ -75,23 +75,27 @@ It has chosen order to provide a large color contrast for values that are partic
 Convert J value into (R, G, B) values (0 - 1).
 
 ```cpp
-double colormapWhiteBackground[] = {0, 1, 1, 0, 1, 0, 0.8, 0.8, 0, 0.9, 0.4, 0, 1, 0, 0, 1, 0, 0.5, 1, 0, 1, 0.5, 0, 1, 0, 0, 1, 0, 0, 0.5, 0, 0, 0,}; // for white background
-double colormap[] = {0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0.5, 0, 1, 0, 0, 1, 0, 0.5, 1, 0, 1, 0.5, 0, 0.9, 0.2, 0.2, 1, 0.4, 0.4, 0.5, 1, 1, 1,}; // for black background
-   
+// input
 const double Jcoupling = 7.1 ; // Hz
+
+const double colormapWhiteBackground[] = {0, 1, 1, 0, 1, 0, 0.8, 0.8, 0, 0.9, 0.4, 0, 1, 0, 0, 1, 0, 0.5, 1, 0, 1, 0.5, 0, 1, 0, 0, 1, 0, 0, 0.5, 0, 0, 0,}; // for white background
+const double colormap[] = {0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0.5, 0, 1, 0, 0, 1, 0, 0.5, 1, 0, 1, 0.5, 0, 0.9, 0.2, 0.2, 1, 0.4, 0.4, 0.5, 1, 1, 1,}; // for black background
+   
 const double JcouplingAbs = abs(Jcoupling) ; // Hz
 int baseColorInt = floor(JcouplingAbs / 2.0)); // -20 - 20.0 ->  0 - 9 
 if (baseColorInt > 9) baseColorInt = 9; // baseColorInt 0 - 9
 float adjust = (JcouplingAbs - 2 * baseColorInt) / 2.0; // normalized diff (0-1) for 2 Hz
 if (adjust > 1.0) adjust = 1.0; // adjust 0 - 1.0
 const int baseColorIndex =  3 * baseColorInt; // 3 because RGB
+
+// Output
 double colormap[] = {0, 0, 0};
 // the loop is language dependent, lets drop it...
 curColor[0] = colormap[baseColorIndex + 0] + adjust * (colormap[baseColorIndex + 3 + 0] - colormap[baseColorIndex + 0]);
 curColor[1] = colormap[baseColorIndex + 1] + adjust * (colormap[baseColorIndex + 3 + 1] - colormap[baseColorIndex + 1]);
 curColor[2] = colormap[baseColorIndex + 2] + adjust * (colormap[baseColorIndex + 3 + 2] - colormap[baseColorIndex + 2]);
 
-const bool negExpVal = (Jcoupling < 0.0); // used to change line type for negative values.                      
+const bool negExpVal = (Jcoupling < 0.0); // used to change line type for negative values.                   
 ```
 
 Please make pull requests or raise issue to send us your code in other languages!
