@@ -82,7 +82,7 @@ const double colormapWhiteBackground[] = {0, 1, 1, 0, 1, 0, 0.8, 0.8, 0, 0.9, 0.
 const double colormap[] = {0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0.5, 0, 1, 0, 0, 1, 0, 0.5, 1, 0, 1, 0.5, 0, 0.9, 0.2, 0.2, 1, 0.4, 0.4, 0.5, 1, 1, 1,}; // for black background
    
 const double JcouplingAbs = abs(Jcoupling) ; // Hz
-int baseColorInt = floor(JcouplingAbs / 2.0)); // -20 - 20.0 ->  0 - 9 
+int baseColorInt = floor(JcouplingAbs / 2.0); // -20 - 20.0 ->  0 - 9 
 if (baseColorInt > 9) baseColorInt = 9; // baseColorInt 0 - 9
 float adjust = (JcouplingAbs - 2 * baseColorInt) / 2.0; // normalized diff (0-1) for 2 Hz
 if (adjust > 1.0) adjust = 1.0; // adjust 0 - 1.0
