@@ -72,7 +72,7 @@ It has chosen order to provide a large color contrast for values that are partic
 		</tr>
 	</table>
 
-Decoding code
+Convert J value in (R, G, B) values (0 - 1).
 
 ```cpp
 double colormapWhiteBackground[] = {0, 1, 1, 0, 1, 0, 0.8, 0.8, 0, 0.9, 0.4, 0, 1, 0, 0, 1, 0, 0.5, 1, 0, 1, 0.5, 0, 1, 0, 0, 1, 0, 0, 0.5, 0, 0, 0,}; // for white background
@@ -92,3 +92,5 @@ curColor[2] = colormap[baseColorIndex + 2] + adjust * (colormap[baseColorIndex +
 
 const bool negExpVal = (expVal < 0.0); // used to change line type for negative values.                      
 ```
+
+Please make pull requests or raise issue to send us your code in other languages!
