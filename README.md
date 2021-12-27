@@ -80,11 +80,11 @@ double colormap[] = {0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0.5, 0, 1, 0, 0, 1, 0, 0.5, 1
    
 const double Jcoupling = 7.1 ; // Hz
 const double JcouplingAbs = abs(Jcoupling) ; // Hz
-const int baseColorInt = floor(JcouplingAbs / 2.0)); // -20 - 20.0 ->  0 - 9 
+int baseColorInt = floor(JcouplingAbs / 2.0)); // -20 - 20.0 ->  0 - 9 
 if (baseColorInt > 9) baseColorInt = 9; // baseColorInt 0 - 9
 float adjust = (JcouplingAbs - 2 * baseColorInt) / 2.0; // normalized diff (0-1)
 if (adjust > 1.0) adjust = 1.0; // adjust 0 - 1.0
-baseColorIndex =  3 * baseColorInt; // 3 because RGB
+const int baseColorIndex =  3 * baseColorInt; // 3 because RGB
 // the loop is language dependent, lets drop it...
 curColor[0] = colormap[baseColorIndex + 0] + adjust * (colormap[baseColorIndex + 3 + 0] - colormap[baseColorIndex + 0]);
 curColor[1] = colormap[baseColorIndex + 1] + adjust * (colormap[baseColorIndex + 3 + 1] - colormap[baseColorIndex + 1]);
