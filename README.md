@@ -78,6 +78,7 @@ Convert J value into (R, G, B) values (0 - 1).
 // input
 const double Jcoupling = 7.1 ; // Hz
 
+// Color maps. First color for 0 Hz, second color for 2 Hz, etc. up to 20 Hz
 const double colormapWhiteBackground[] = {0, 1, 1, 0, 1, 0, 0.8, 0.8, 0, 0.9, 0.4, 0, 1, 0, 0, 1, 0, 0.5, 1, 0, 1, 0.5, 0, 1, 0, 0, 1, 0, 0, 0.5, 0, 0, 0,}; // for white background
 const double colormap[] = {0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0.5, 0, 1, 0, 0, 1, 0, 0.5, 1, 0, 1, 0.5, 0, 0.9, 0.2, 0.2, 1, 0.4, 0.4, 0.5, 1, 1, 1,}; // for black background
    
