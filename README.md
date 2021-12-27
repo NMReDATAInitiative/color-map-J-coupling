@@ -90,7 +90,7 @@ curColor[0] = colormap[baseColorIndex + 0] + adjust * (colormap[baseColorIndex +
 curColor[1] = colormap[baseColorIndex + 1] + adjust * (colormap[baseColorIndex + 3 + 1] - colormap[baseColorIndex + 1]);
 curColor[2] = colormap[baseColorIndex + 2] + adjust * (colormap[baseColorIndex + 3 + 2] - colormap[baseColorIndex + 2]);
 
-const bool negExpVal = (expVal < 0.0); // used to change line type for negative values.                      
+const bool negExpVal = (Jcoupling < 0.0); // used to change line type for negative values.                      
 ```
 
 Please make pull requests or raise issue to send us your code in other languages!
