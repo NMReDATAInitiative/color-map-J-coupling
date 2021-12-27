@@ -70,9 +70,8 @@ It has chosen order to provide a large color contrast for values that are partic
 			<td> <span style="color:#FFFFFF;background:black;">(1 1 1)</span> </td>
 			<td> <span style="color:#000000;background:white;">(0 0 0)</span> </td>
 		</tr>
-	</table></div>
-</div>
- 
+	</table>
+
 Decoding code
 
 ```cpp
