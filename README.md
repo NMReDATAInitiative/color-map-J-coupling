@@ -90,7 +90,7 @@ if (adjust > 1.0) adjust = 1.0; // adjust 0 - 1.0
 const int baseColorIndex =  3 * baseColorInt; // 3 because RGB
 
 // Output
-double colormap[] = {0, 0, 0}; // RGB
+double curColor[] = {0, 0, 0}; // RGB
 // the loop is language dependent, lets drop it...
 curColor[0] = colormap[baseColorIndex + 0] + adjust * (colormap[baseColorIndex + 3 + 0] - colormap[baseColorIndex + 0]);
 curColor[1] = colormap[baseColorIndex + 1] + adjust * (colormap[baseColorIndex + 3 + 1] - colormap[baseColorIndex + 1]);
